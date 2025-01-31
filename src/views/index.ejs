@@ -16,14 +16,45 @@
 			<input type="text" id="qr-id" class="qr-input" placeholder="Enter ID">
 		</div>
 		<div class="content">
-			<label for="qr-price">Price:</label>
-			<input type="text" id="qr-price" class="qr-input" placeholder="Enter Price">
+			<label for="qr-name">Nombre:</label>
+			<input type="text" id="qr-name" class="qr-input" placeholder="Enter Price">
 		</div>
 		<button type="submit" class="content">Generate QR Code</button>
 	</form>
 	<div id="qr-result">
 	</div>
-	<script src="script.js"></script>
+	<!-- <script src="script.js"></script> -->
+	 <script>
+		// script.js
+
+document.getElementById('qr-form').addEventListener('submit', function (e) {
+	e.preventDefault();
+
+	const id = document.getElementById('qr-id').value;
+	const name = document.getElementById('qr-name').value;
+	const data = { id, name }
+
+	fetch('http://localhost:3500/generate-qr', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify({ data })
+	})
+		.then(response => response.blob())
+		.then(blob => {
+			const qrImage = document.createElement('img');
+			const qrImageUrl = URL.createObjectURL(blob);
+			qrImage.src = qrImageUrl;
+			const qrResultDiv = document.getElementById('qr-result');
+			qrResultDiv.innerHTML = '';
+			qrResultDiv.appendChild(qrImage);
+		})
+		.catch(error => console.error('Error generating QR code:', error));
+
+});
+
+	 </script>
 </body>
 
 </html>
