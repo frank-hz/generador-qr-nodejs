@@ -1,0 +1,18 @@
+{
+  "name": "generador-qr-nodejs",
+  "version": "1.0.0",
+  "description": "generacion de codigos qr",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js"
+  },
+  "author": "frank-hz",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9",
+    "qrcode": "^1.5.4"
+  }
+}
