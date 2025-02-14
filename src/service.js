@@ -1,7 +1,7 @@
 const QRCode = require("qrcode");
 
 exports.formatearData = (data) => {
-    return  `UserID: ${data.id} - Name: ${data.name}`;
+    return  `${data.content}`;
 }
 
 exports.generadorQR = async (qrCodeText) => {

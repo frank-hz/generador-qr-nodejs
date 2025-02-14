@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "build:css": "npx tailwindcss -i src/tailwind.css -o src/public/app.css --watch"
   },
   "author": "frank-hz",
   "license": "ISC",
@@ -15,5 +16,10 @@
     "express": "^4.21.2",
     "nodemon": "^3.1.9",
     "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.2",
+    "tailwindcss": "^3.4.17"
   }
 }
