@@ -17,9 +17,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get("/",(req,res)=>{
     res.render("index");
-})
+});
 app.post('/generate-qr', controller.generadorQR);
 
 app.listen(port, ()=>{
-    console.log("app live in http://localhost:"+port);
-})
+    console.log("aplicacion corriendo en http://localhost:"+port);
+});

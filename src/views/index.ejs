@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>QR Code Generator</title>
 	<link rel="stylesheet" href="app.css">
 </head>
-<body>
-	<div class="min-h-screen bg-gray-200 flex items-center justify-center p-4">
+<body class="font-sans">
+	<div class="min-h-screen bg-gray-200 flex items-center justify-center p-4 relative">
 		<div class="w-full max-w-6xl bg-white rounded-2xl shadow-lg flex overflow-hidde">
-			<div class="w-1/2 bg-blue-700 p-8 text-white rounded-l-md">
+			<div class="w-1/2 bg-slate-800 p-8 text-white rounded-l-md animate-pulsex">
 				<div class="mb-12">
-					<h2 class="text-xl font-[500] mb-2">Generador de Codigos QR</h2>
+					<h2 class="text-xl font-bold mb-2">
+						Codigos QR
+					</h2>
 				</div>
 				<div class="space-y-6">
 					<div class="flex flex-col items-start gap-6">
@@ -22,8 +23,8 @@
 								<path d="M9 12L10.6828 13.6828V13.6828C10.858 13.858 11.142 13.858 11.3172 13.6828V13.6828L15 10" stroke="auto" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 							</svg>
 							<div class="">
-								<h3 class="font-semibold mb-1">Your details</h3>
-								<p class="text-white">Please provide your name and email</p>
+								<h3 class="font-semibold mb-1">Facilidad de Uso</h3>
+								<p class="text-white">No requiere teclear enlaces manualmente.</p>
 							</div>
 						</div>
 						<div class="flex items-center gap-4">
@@ -32,8 +33,8 @@
 								<path d="M9 12L10.6828 13.6828V13.6828C10.858 13.858 11.142 13.858 11.3172 13.6828V13.6828L15 10" stroke="auto" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 							</svg>
 							<div class="">
-								<h3 class="font-semibold mb-1">Scan QR code</h3>
-								<p class="text-white">Verify at least one device with 2FA</p>
+								<h3 class="font-semibold mb-1">Rápida Accesibilidad</h3>
+								<p class="text-white">Accede a información con solo un escaneo.</p>
 							</div>
 						</div>
 						<div class="flex items-center gap-4">
@@ -42,8 +43,8 @@
 								<path d="M9 12L10.6828 13.6828V13.6828C10.858 13.858 11.142 13.858 11.3172 13.6828V13.6828L15 10" stroke="auto" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 							</svg>
 							<div class="">
-								<h3 class="font-semibold mb-1">YChoose a password</h3>
-								<p class="text-white">Must be at least 8 characters</p>
+								<h3 class="font-semibold mb-1">Menor Espacio</h3>
+								<p class="text-white">Puede almacenar más datos en menos espacio que los códigos de barras tradicionales.</p>
 							</div>
 						</div>
 						<div class="flex items-center gap-4">
@@ -52,52 +53,45 @@
 								<path d="M9 12L10.6828 13.6828V13.6828C10.858 13.858 11.142 13.858 11.3172 13.6828V13.6828L15 10" stroke="auto" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 							</svg>
 							<div class="">
-								<h3 class="font-semibold mb-1">Invite your team</h3>
-								<p class="text-white">Start collaborating with your team</p>
+								<h3 class="font-semibold mb-1">Interactividad</h3>
+								<p class="text-white">Facilita acceso a contenido multimedia, formularios, apps, etc</p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="mt-auto pt-12">
-					<button class="w-full py-3 text-center text-blue-600 bg-white rounded-lg font-medium hover:text-blue-700 transition-all">
-						Already have an account?
-					</button>
+					<a class="block w-full py-3 text-center text-slate-800 bg-white rounded-lg font-medium hover:text-slate-900 transition-all cursor-pointer" href="https://es.wikipedia.org/wiki/Código_QR">
+						Aprender Mas
+					</a>
 				</div>
 			</div>
 			<div class="w-1/2 p-8 flex flex-col">
 				
 				<div class="flex-1 flex flex-col items-center justify-content max-w-md mx-auto pt-8">
-					<h2 class="text-3xl font-semibold mb-2">Escanear Codigo QR</h2>
-					<p class="text-gray-600 mb-8 text-center">
+					<h2 class="text-2xl font-black mb-2 text-slate-800 flex gap-1">
+						<svg fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" id="icon" xmlns="http://www.w3.org/2000/svg" class="fill-slate-800 w-[28px] h-[28px]">
+							<path d="M12,10H22V4a2,2,0,0,0-2-2H4A2,2,0,0,0,2,4V20a2,2,0,0,0,2,2h6V12A2,2,0,0,1,12,10Z"/>
+							<path d="M28,10H22V20a2,2,0,0,1-2,2H10v6a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V12A2,2,0,0,0,28,10Z"/>
+							<rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="fill-none" width="32" height="32"/>
+						</svg>
+						Generador de QR 
+					</h2>
+					<p class="text-slate-600 mb-6 text-center">
 						Escanea el siguiente codigo para obtener el contenido
 					</p>
-					<div id="qrResult" class="relative mb-8">
-						<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=example" alt="QR Code" class="w-48 h-48"/>
-					</div>
-					
-					<div class="flex justify-center mt-2 mb-3 gap-2">
-						<button class="w-md px-4 py-2.5 rounded-md bg-gray-200 text-center font-mono hover:bg-blue-700 hover:text-white transition-colors">
-							URL
-						</button>
-						<button class="w-md px-4 py-2.5 rounded-md bg-gray-200 text-center font-mono hover:bg-blue-700 hover:text-white transition-colors">
-							Mensaje
-						</button>
+					<div id="qrResult" class="relative mb-8 w-[200px] h-[200px] border-[3px] border-dashed rounded-md border-gray-300 flex justify-center items-center">
+						<p class="text-gray-400 font-bold">QR AREA</p>
+						<!-- <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=example" alt="QR Code" class="w-48 h-48"/> -->
 					</div>
 					<form id="qrForm" class="w-full">
-						<p class="text-left text-sm text-gray-700 mb-2">
-							Ingresa el contenido a generar:
+						<p class="text-left text-sm text-gray-600 mb-2">
+							Ingresa el contenido a generar (TEXTO o URL):
 						</p>
-						<!-- <div class="flex gap-2 mb-6">
-							<input type="text" class="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg bg-gray-100 text-center font-mono" value="VF54DFADSA" readonly>
-							<button class="p-2 rounded-xl w-[40px] h-[40px] transition-colors hover:bg-gray-300 text-center flex justify-center">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-[24px] h-[24px] text-gray-800"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-							</button>
-						</div> -->
-						<textarea id="qr-content" class="block border border-gray-300 p-2.5 w-full text-sm text-gray-900 focus:ring-blue-600 rounded-lg bg-gray-100 font-mono mb-6 focus:outline-gray-400" rows="4"></textarea>
+						<textarea id="content" class="block border border-gray-300 p-2.5 w-full text-sm text-gray-900 focus:ring-slate-600 rounded-lg bg-gray-100 font-mono mb-6 focus:outline-gray-400" rows="4"></textarea>
 						
-						<button type="submit" class="w-full bg-blue-700 text-white py-3 rounded-lg font-medium hover:bg-blue-600 transition-colors flex justify-center items-center disabled:bg-gray-400" disabled>
-							Generar Codigo 
-							<div class="ml-1.5 block w-[20px] h-[20px] border-[4px] border-gray-200 border-r-transparent rounded-full animate-spin"></div>
+						<button id="send_button" type="submit" class="w-full bg-slate-800 text-white py-3 rounded-lg font-medium hover:bg-slate-700 transition-colors flex justify-center items-center disabled:bg-gray-400">
+							Generar 
+							<div id="send_button_icon" class="ml-1.5 w-[20px] h-[20px] border-[4px] border-gray-200 border-r-transparent rounded-full animate-spin hidden"></div>
 						</button>
 					</form>
 				</div>
@@ -106,22 +100,11 @@
 			</div>
 
 		</div>
+		<!-- <div class="absolute p-4 block bg-gray-400 rounded-lg bottom-4">
+			<p>lfasdfs</p>
+			<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <path d="M7 5V4H5v2H3v14h14V6h-2V4h-2v2H7V5zm-2 5V8h10v2H5zm0 2h10v6H5v-6zm16-3V8h-2v6h2V9zm0 6h-2v2h2v-2z" fill="currentColor"/> </svg>
+		</div> -->
 	</div>
-	<!-- <h1>QR Code Generator</h1>
-	<form id="qr-form">
-		<div class="content">
-			<label for="qr-id" class="margin">ID:</label>
-			<input type="text" id="qr-id" class="qr-input" placeholder="Enter ID">
-		</div>
-		<div class="content">
-			<label for="qr-name">Nombre:</label>
-			<input type="text" id="qr-name" class="qr-input" placeholder="Enter Price">
-		</div>
-		<button type="submit" class="content">Generate QR Code</button>
-	</form>
-	<div id="qr-result">
-	</div>
-	<script src="script.js"></script> -->
 	<script src="script.js?v=5461"></script>
 </body>
 
