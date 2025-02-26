@@ -1,5 +1,5 @@
 (function(){
-
+	const BASE_URL = `${location.protocol}//${location.hostname}:${location.port}`;
 	document.getElementById('qrForm')?.addEventListener('submit', function (e) {
 		e.preventDefault();
 	
@@ -13,10 +13,9 @@
 		const button_icon = document.getElementById('send_button_icon');
 		const qrResultDiv = document.getElementById('qrResult');
 		try {
-	
 			button.disabled = true;
 			button_icon.classList.remove('hidden');
-			const request = await fetch('http://localhost:3500/generate-qr', {
+			const request = await fetch(`${BASE_URL}/generate-qr`, {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify({ data })
@@ -44,7 +43,7 @@
 	}
 
 	function generateQRCode_v1(data){
-		fetch('http://localhost:3500/generate-qr', {
+		fetch(`${BASE_URL}/generate-qr`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
